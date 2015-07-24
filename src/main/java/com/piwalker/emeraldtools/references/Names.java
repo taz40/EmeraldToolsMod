@@ -17,4 +17,8 @@ public class Names {
         public static final String EMERALDSTONE = "EmeraldStoneTileEntity";
         public static final String EMERALDCORE = "EmeraldCoreTileEntity";
     }
+
+    public static class Inventories{
+        public static final String CRYSTALALTAR = "container."+References.MOD_ID+":crystalAlter.name";
+    }
 }
