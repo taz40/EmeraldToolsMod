@@ -18,7 +18,7 @@ public class ContainerChrystalAlter extends ContainerEmeraldTools {
         this.addSlotToContainer(new Slot(te, 1, 43, 33));
         this.addSlotToContainer(new Slot(te, 2, 64, 33));
         this.addSlotToContainer(new Slot(te, 3, 84, 33));
-        this.addSlotToContainer(new Slot(te, 4, 141, 33));
+        this.addSlotToContainer(new Slot(te, 4, 142, 33));
 
         this.addPlayerSlots(playerInventory, 8,84);
     }

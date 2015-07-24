@@ -1,0 +1,42 @@
+# Blender MTL File: 'emrald altar.blend'
+# Material Count: 4
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\Users\Kids\Documents\Textures\emeraldCore.png
+
+newmtl Material.001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\Users\Kids\Documents\Textures\emeraldStone.png
+
+newmtl Material.001_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Kids\\Documents\\Textures\\emeraldStone.png
+
+newmtl Material_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\Kids\\Documents\\Textures\\emeraldCore.png

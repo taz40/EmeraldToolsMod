@@ -2,6 +2,7 @@ package com.piwalker.emeraldtools.tileentity;
 
 import com.piwalker.emeraldtools.EmeraldTools;
 import com.piwalker.emeraldtools.client.handler.GuiHandler;
+import com.piwalker.emeraldtools.entity.EntityItemVisual;
 import com.piwalker.emeraldtools.init.ModBlocks;
 import com.piwalker.emeraldtools.references.Names;
 import com.piwalker.emeraldtools.utility.LogHelper;
@@ -9,6 +10,7 @@ import cpw.mods.fml.common.network.ByteBufUtils;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -24,6 +26,19 @@ import java.util.Arrays;
 public class TileEntityEmeraldCore extends TileEntityEmeraldTools implements IInventory {
     public boolean isMultiblock = false;
     private ItemStack[] items = new ItemStack[5];
+
+    public boolean firstrun = true;
+
+    @Override
+    public void updateEntity(){
+        super.updateEntity();
+        if(firstrun){
+            checkForMultiblock();
+            firstrun = false;
+        }
+    }
+
+
 
     public void rightClick(World world,int x,int y,int z,EntityPlayer player){
         if(isMultiblock && !world.isRemote){

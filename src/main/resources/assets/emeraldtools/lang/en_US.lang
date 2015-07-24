@@ -9,4 +9,4 @@ tile.emeraldtools:emeraldStone.name=Emerald Infused Stone
 tile.emeraldtools:emeraldCore.name=Emerald Core
 
 #   Inventories
-container.emeraldtools:crystalAltar.name=Crystal Altar
+container.emeraldtools:crystalAlter.name=Crystal Altar

@@ -1,5 +1,7 @@
 package com.piwalker.emeraldtools;
 
+import com.piwalker.emeraldtools.client.handler.GuiHandler;
+import com.piwalker.emeraldtools.handler.network.DescriptionHandler;
 import com.piwalker.emeraldtools.init.ModBlocks;
 import com.piwalker.emeraldtools.init.ModItems;
 import com.piwalker.emeraldtools.init.ModTileEntities;
@@ -11,6 +13,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 /**
  * Created by SamuelPiWalker on 7/23/2015.
@@ -30,6 +33,9 @@ public class EmeraldTools {
         ModItems.init();
         ModBlocks.init();
         ModTileEntities.init();
+        DescriptionHandler.init();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+
     }
 
     @Mod.EventHandler

@@ -2,6 +2,7 @@ package com.piwalker.emeraldtools.tileentity;
 
 import com.piwalker.emeraldtools.utility.LogHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -17,14 +18,42 @@ public class TileEntityEmeraldStone extends TileEntityEmeraldTools {
     public TileEntityEmeraldCore master;
     private boolean firstrun = true;
 
+    @Override
+    public void readFromNBT(NBTTagCompound tag) {
+        super.readFromNBT(tag);
+        int mx = tag.getInteger("masterX");
+        int my = tag.getInteger("masterY");
+        int mz = tag.getInteger("masterZ");
+
+        TileEntity te = worldObj.getTileEntity(mx, my, mz);
+        if(te != null && te instanceof TileEntityEmeraldCore){
+            master = (TileEntityEmeraldCore)te;
+        }
+
+    }
+
+    @Override
+    public void writeToNBT(NBTTagCompound tag) {
+        super.writeToNBT(tag);
+        tag.setInteger("masterX", master.xCoord);
+        tag.setInteger("masterY", master.yCoord);
+        tag.setInteger("masterZ", master.zCoord);
+    }
+
     public void rightClick(World world,int x,int y,int z,EntityPlayer player){
-        if(master != null){
+        if(master != null && world.getTileEntity(master.xCoord, master.yCoord, master.zCoord) instanceof TileEntityEmeraldCore){
             master.rightClick(world, x, y, z, player);
+        }else{
+            initializeMultiblockIfNecessary();
         }
     }
 
     public void update(){
-        master.checkForMultiblock();
+        if(master != null && worldObj.getTileEntity(master.xCoord, master.yCoord, master.zCoord) instanceof TileEntityEmeraldCore) {
+            master.checkForMultiblock();
+        }else{
+            initializeMultiblockIfNecessary();
+        }
     }
 
     public TileEntityEmeraldCore getMaster(){
@@ -77,7 +106,7 @@ public class TileEntityEmeraldStone extends TileEntityEmeraldTools {
                     }
                 }
             }
-            LogHelper.info("Setting master to " + master.xCoord + ", " + master.yCoord + ", " + master.zCoord);
+            if(master != null) LogHelper.info("Setting master to " + master.xCoord + ", " + master.yCoord + ", " + master.zCoord);
             for(TileEntityEmeraldTools block : connectedBlocks){
                 if(block instanceof TileEntityEmeraldStone){
                     ((TileEntityEmeraldStone)block).setMaster(master);
