@@ -2,6 +2,7 @@ package com.piwalker.emeraldtools;
 
 import com.piwalker.emeraldtools.init.ModBlocks;
 import com.piwalker.emeraldtools.init.ModItems;
+import com.piwalker.emeraldtools.init.ModTileEntities;
 import com.piwalker.emeraldtools.init.Recipes;
 import com.piwalker.emeraldtools.proxy.IProxy;
 import com.piwalker.emeraldtools.references.References;
@@ -28,6 +29,7 @@ public class EmeraldTools {
         proxy.preInit();
         ModItems.init();
         ModBlocks.init();
+        ModTileEntities.init();
     }
 
     @Mod.EventHandler
