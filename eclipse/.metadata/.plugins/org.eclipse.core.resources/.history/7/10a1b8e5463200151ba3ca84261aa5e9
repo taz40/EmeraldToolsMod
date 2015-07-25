@@ -1,0 +1,12 @@
+#   Items
+item.emeraldtools:emeraldShard.name=Emerald Shard
+
+#   Creative Tabs
+itemGroup.emeraldtools=Emerald Tools
+
+#   Blocks
+tile.emeraldtools:emeraldStone.name=Emerald Infused Stone
+tile.emeraldtools:emeraldCore.name=Emerald Core
+
+#   Inventories
+container.emeraldtools:crystalAlter.name=Crystal Altar

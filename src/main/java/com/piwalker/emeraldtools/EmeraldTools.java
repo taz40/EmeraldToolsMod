@@ -6,6 +6,7 @@ import com.piwalker.emeraldtools.init.ModBlocks;
 import com.piwalker.emeraldtools.init.ModItems;
 import com.piwalker.emeraldtools.init.ModTileEntities;
 import com.piwalker.emeraldtools.init.Recipes;
+import com.piwalker.emeraldtools.network.NetworkHandler;
 import com.piwalker.emeraldtools.proxy.IProxy;
 import com.piwalker.emeraldtools.references.References;
 import cpw.mods.fml.common.Mod;
@@ -34,6 +35,7 @@ public class EmeraldTools {
         ModBlocks.init();
         ModTileEntities.init();
         DescriptionHandler.init();
+        NetworkHandler.init();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
     }

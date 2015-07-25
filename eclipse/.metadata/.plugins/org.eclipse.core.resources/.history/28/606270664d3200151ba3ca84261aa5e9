@@ -1,0 +1,19 @@
+package com.piwalker.emeraldtools.crafting;
+
+import java.util.ArrayList;
+
+public class EmeraldToolsRegistry {
+	
+	ArrayList<EmeraldToolsRecipe> recipes = new ArrayList<EmeraldToolsRecipe>();
+	
+	public void RegisterRecipe(EmeraldToolsRecipe recipe){
+		recipes.add(recipe);
+	}
+	
+	
+	
+	public ArrayList<EmeraldToolsRecipe> getRecipes(){
+		retunr recipes;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.piwalker.emeraldtools.crafting;
+
+import net.minecraft.item.ItemStack;
+
+public class EmeraldToolsRecipe {
+	int emeralds;
+	ItemStack other;
+	ItemStack out;
+	
+	public EmeraldToolsRecipe(ItemStack out, int emeralds, ItemStack other){
+		this.out = out;
+		this.emeralds = emeralds;
+		this.other = other;
+	}
+}

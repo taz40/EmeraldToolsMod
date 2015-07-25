@@ -1,0 +1,28 @@
+package com.piwalker.emeraldtools.client.gui;
+
+import com.piwalker.emeraldtools.inventory.ContainerChrystalAlter;
+import com.piwalker.emeraldtools.tileentity.TileEntityEmeraldCore;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
+
+/**
+ * Created by SamuelPiWalker on 7/23/2015.
+ */
+public class GuiChrystalAlter extends GuiEmeraldTools {
+	TileEntityEmeraldCore te;
+
+    public GuiChrystalAlter(InventoryPlayer playerInventory, TileEntityEmeraldCore te) {
+        super(new ContainerChrystalAlter(playerInventory, te), "crystalAltar", te);
+        this.te = te;
+    }
+
+	@Override
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+		// TODO Auto-generated method stub
+		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+		this.fontRendererObj.drawString("Time until crafted: " + (te.timeUntilCrafted/20), p_78276_2_, p_78276_3_, 4210752)
+	}
+    
+    
+}

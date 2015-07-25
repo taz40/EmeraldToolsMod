@@ -1,0 +1,14 @@
+package com.piwalker.emeraldtools.item;
+
+import net.minecraft.item.ItemPickaxe;
+
+public class ItemEmeraldPickaxe extends ItemPickaxe {
+
+	protected ItemEmeraldPickaxe() {
+		super(ToolMaterialEmerald.EMERALD);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

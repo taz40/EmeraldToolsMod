@@ -21,4 +21,11 @@ public class Names {
     public static class Inventories{
         public static final String CRYSTALALTAR = "container."+References.MOD_ID+":crystalAlter.name";
     }
+    public static class Tools{
+    	public static final String PICKAXEEMERALD = "emeraldPick";
+    	public static final String SPADEEMERALD = "emeraldSpade";
+    	public static final String SWORDEMERALD = "emeraldSword";
+    	public static final String AXEEMERALD = "emeraldAxe";
+    	public static final String HOEEMERALD = "emeraldHoe";
+    }
 }

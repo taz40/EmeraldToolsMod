@@ -1,5 +1,10 @@
 #   Items
 item.emeraldtools:emeraldShard.name=Emerald Shard
+item.emeraldtools:emeraldPick.name=Emerald Pickaxe
+item.emeraldtools:emeraldSpade.name=Emerald Shovel
+item.emeraldtools:emeraldSword.name=Emerald Sword
+item.emeraldtools:emeraldAxe.name=Emerald Axe
+item.emeraldtools:emeraldHoe.name=Emerald Hoe
 
 #   Creative Tabs
 itemGroup.emeraldtools=Emerald Tools
@@ -10,3 +15,7 @@ tile.emeraldtools:emeraldCore.name=Emerald Core
 
 #   Inventories
 container.emeraldtools:crystalAlter.name=Crystal Altar
+
+#   Gui
+gui.emeraldtools.crystalaltar.button.craft=Start Crafting
+gui.emraldtools.crystalalter.time=Time Until Crafted %sS

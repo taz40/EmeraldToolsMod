@@ -1,0 +1,7 @@
+package com.piwalker.emeraldtools.crafting;
+
+public class EmeraldToolsRegistry {
+	
+	ArrayList<EmeraldToolsRecipe> recipes = new ArrayList<EmeraldToolsRecepe>();
+
+}

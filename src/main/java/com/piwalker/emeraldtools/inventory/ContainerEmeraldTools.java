@@ -24,6 +24,8 @@ public abstract class ContainerEmeraldTools extends Container {
         {
             this.addSlotToContainer(new Slot(playerInventory, i, x + i * 18,y + 58));
         }
+        
+        
     }
 
 }

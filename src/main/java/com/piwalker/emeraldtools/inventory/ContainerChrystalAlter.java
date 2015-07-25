@@ -1,8 +1,13 @@
 package com.piwalker.emeraldtools.inventory;
 
+import java.util.List;
+
 import com.piwalker.emeraldtools.tileentity.TileEntityEmeraldCore;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
@@ -11,6 +16,7 @@ import net.minecraft.item.ItemStack;
  */
 public class ContainerChrystalAlter extends ContainerEmeraldTools {
     private TileEntityEmeraldCore te;
+    private int lastCraftingTime = -100000;
 
     public ContainerChrystalAlter(InventoryPlayer playerInventory, TileEntityEmeraldCore te){
         this.te = te;
@@ -38,30 +44,47 @@ public class ContainerChrystalAlter extends ContainerEmeraldTools {
         {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
-
-            if (slotNum < 5)
-            {
-                if (!this.mergeItemStack(itemstack1, 5, 41, true))
-                {
+            if (slotNum < 5) {
+                if (!this.mergeItemStack(itemstack1, 5, 41, true)) {
+                    return null;
+                }
+            } else {
+                boolean transfered = false;
+                for (int i = 0; i < 5; i++) {
+                    if (!((Slot) inventorySlots.get(i)).getHasStack()) {
+                        if (itemstack1.stackSize > 0 && ((Slot)inventorySlots.get(i)).isItemValid(itemstack1)) {
+                        	if(i < 4){
+                        		if(itemstack1.getItem() == Items.emerald){
+                        			ItemStack stack = itemstack1.splitStack(1);
+    	                            if (this.mergeItemStack(stack, i, i + 1, false)) {
+    	                                transfered = true;
+    	                            } else {
+    	                                itemstack1.stackSize++;
+    	                            }
+                        		}
+                        	}else{
+	                            ItemStack stack = itemstack1.splitStack(1);
+	                            if (this.mergeItemStack(stack, i, i + 1, false)) {
+	                                transfered = true;
+	                            } else {
+	                                itemstack1.stackSize++;
+	                            }
+                        	}
+                        }
+                    }
+                }
+                if (!transfered) {
                     return null;
                 }
             }
-            else if (!this.mergeItemStack(itemstack1, 0, 5, false))
-            {
-                return null;
-            }
 
-            if (itemstack1.stackSize == 0)
-            {
-                slot.putStack((ItemStack)null);
-            }
-            else
-            {
+            if (itemstack1.stackSize == 0) {
+                slot.putStack((ItemStack) null);
+            } else {
                 slot.onSlotChanged();
             }
 
-            if (itemstack1.stackSize == itemstack.stackSize)
-            {
+            if (itemstack1.stackSize == itemstack.stackSize) {
                 return null;
             }
 
@@ -70,4 +93,48 @@ public class ContainerChrystalAlter extends ContainerEmeraldTools {
 
         return itemstack;
     }
+
+
+
+	@Override
+	public void detectAndSendChanges() {
+		// TODO Auto-generated method stub
+		super.detectAndSendChanges();
+		if(lastCraftingTime != te.timeUntilCrafted){
+			for(ICrafting crafter : (List<ICrafting>)this.crafters){
+				crafter.sendProgressBarUpdate(this, 0, te.timeUntilCrafted);
+			}
+			lastCraftingTime = te.timeUntilCrafted;
+		}
+	}
+
+
+	@Override
+	public void updateProgressBar(int id, int value) {
+		// TODO Auto-generated method stub
+		super.updateProgressBar(id, value);
+		if(id == 0){
+			te.timeUntilCrafted = value;
+		}
+	}
+
+
+	@Override
+	public void putStackInSlot(int slot, ItemStack stack) {
+		// TODO Auto-generated method stub
+		if(slot < 4 && stack != null){
+			if(stack.getItem() == Items.emerald){
+				super.putStackInSlot(slot, stack);
+			}
+		}else{
+			super.putStackInSlot(slot, stack);
+		}
+		
+	}
+	
+	
+	
+	
+    
+    
 }

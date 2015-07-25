@@ -1,0 +1,68 @@
+package com.piwalker.emeraldtools.network;
+
+import java.nio.ByteBuffer;
+
+import org.omg.CORBA.portable.InputStream;
+import org.omg.CORBA.portable.OutputStream;
+
+import com.sun.corba.se.impl.protocol.giopmsgheaders.FragmentMessage;
+import com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
+import com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+
+public class MessageHandleGui extends MessageBase {
+
+	@Override
+	public FragmentMessage createFragmentMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GIOPVersion getGIOPVersion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getType() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isLittleEndian() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean moreFragmentsToFollow() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void read(InputStream arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setSize(ByteBuffer arg0, int arg1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void write(OutputStream arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="net.minecraft.client.resources.I18n"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.network.simpleimpl.MessageContext"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.references.References"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.network.NetworkHandler"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.utility.LogHelper"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.crafting.EmeraldToolsRecipe"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.crafting.EmeraldToolsRegistry"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemTool"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.util.EnumHelper"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.creativetabs.CreativeTab"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.references.Names"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="com.piwalker.emeraldtools.references.Names.Tools"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemSword"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+</qualifiedTypeNameHistroy>

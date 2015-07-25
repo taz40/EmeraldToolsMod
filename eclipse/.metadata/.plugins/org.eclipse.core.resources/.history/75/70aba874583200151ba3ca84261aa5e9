@@ -1,0 +1,110 @@
+package com.piwalker.emeraldtools.inventory;
+
+import java.util.List;
+
+import com.piwalker.emeraldtools.tileentity.TileEntityEmeraldCore;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ICrafting;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
+
+/**
+ * Created by SamuelPiWalker on 7/23/2015.
+ */
+public class ContainerChrystalAlter extends ContainerEmeraldTools {
+    private TileEntityEmeraldCore te;
+    private int lastCraftingTime = -100000;
+
+    public ContainerChrystalAlter(InventoryPlayer playerInventory, TileEntityEmeraldCore te){
+        this.te = te;
+        this.addSlotToContainer(new Slot(te, 0, 23, 33));
+        this.addSlotToContainer(new Slot(te, 1, 43, 33));
+        this.addSlotToContainer(new Slot(te, 2, 64, 33));
+        this.addSlotToContainer(new Slot(te, 3, 84, 33));
+        this.addSlotToContainer(new Slot(te, 4, 142, 33));
+
+        this.addPlayerSlots(playerInventory, 8,84);
+    }
+
+
+    @Override
+    public boolean canInteractWith(EntityPlayer player) {
+        return te.isUseableByPlayer(player);
+    }
+
+    public ItemStack transferStackInSlot(EntityPlayer player, int slotNum)
+    {
+        ItemStack itemstack = null;
+        Slot slot = (Slot)this.inventorySlots.get(slotNum);
+
+        if (slot != null && slot.getHasStack())
+        {
+            ItemStack itemstack1 = slot.getStack();
+            itemstack = itemstack1.copy();
+            if (slotNum < 5) {
+                if (!this.mergeItemStack(itemstack1, 5, 41, true)) {
+                    return null;
+                }
+            } else {
+                boolean transfered = false;
+                for (int i = 0; i < 5; i++) {
+                    if (!((Slot) inventorySlots.get(i)).getHasStack()) {
+                        if (itemstack1.stackSize > 0 && ((Slot)inventorySlots.get(i)).isItemValid(itemstack1)) {
+                            ItemStack stack = itemstack1.splitStack(1);
+                            if (this.mergeItemStack(stack, i, i + 1, false)) {
+                                transfered = true;
+                            } else {
+                                itemstack1.stackSize++;
+                            }
+                        }
+                    }
+                }
+                if (!transfered) {
+                    return null;
+                }
+            }
+
+            if (itemstack1.stackSize == 0) {
+                slot.putStack((ItemStack) null);
+            } else {
+                slot.onSlotChanged();
+            }
+
+            if (itemstack1.stackSize == itemstack.stackSize) {
+                return null;
+            }
+
+            slot.onPickupFromSlot(player, itemstack1);
+        }
+
+        return itemstack;
+    }
+
+
+
+	@Override
+	public void detectAndSendChanges() {
+		// TODO Auto-generated method stub
+		super.detectAndSendChanges();
+		if(lastCraftingTime != te.timeUntilCrafted){
+			for(ICrafting crafter : (List<ICrafting>)this.crafters){
+				crafter.sendProgressBarUpdate(this, 0, te.timeUntilCrafted);
+			}
+			lastCraftingTime = te.timeUntilCrafted;
+		}
+	}
+
+
+	@Override
+	public void updateProgressBar(int id, int value) {
+		// TODO Auto-generated method stub
+		super.updateProgressBar(id, value);
+		if(id == 0){
+			te.timeUntilCrafted = value;
+		}
+	}
+    
+    
+}

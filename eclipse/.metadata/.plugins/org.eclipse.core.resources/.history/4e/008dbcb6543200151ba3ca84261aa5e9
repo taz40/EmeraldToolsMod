@@ -1,0 +1,24 @@
+package com.piwalker.emeraldtools.references;
+
+/**
+ * Created by SamuelPiWalker on 7/23/2015.
+ */
+public class Names {
+    public static class Items{
+        public static final String EMERALD_SHARD = "emeraldShard";
+    }
+
+    public static class Blocks{
+        public static final String EMERALDSTONE = "emeraldStone";
+        public static final String EMERALDCORE = "emeraldCore";
+    }
+
+    public static class TileEntities{
+        public static final String EMERALDSTONE = "EmeraldStoneTileEntity";
+        public static final String EMERALDCORE = "EmeraldCoreTileEntity";
+    }
+
+    public static class Inventories{
+        public static final String CRYSTALALTAR = "container."+References.MOD_ID+":crystalAlter.name";
+    }
+}
