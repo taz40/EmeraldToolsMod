@@ -25,6 +25,8 @@ public class BlockEmeraldCore extends BlockEmeraldToolsTileEntity {
     public BlockEmeraldCore() {
         super(Material.iron);
         setBlockName(Names.Blocks.EMERALDCORE);
+        setHardness(1.5F);
+        setResistance(10.0F);
     }
 
 

@@ -22,25 +22,21 @@ public class CrystalAltarRenderer extends TileEntitySpecialRenderer {
     private ResourceLocation crystalCoreTexture;
 
     public CrystalAltarRenderer(){
-        crystalAltar = AdvancedModelLoader.loadModel(new ResourceLocation(References.MOD_ID + ":models/ModelCrystalAltar.obj"));
-        crystalAltarTexture = new ResourceLocation(References.MOD_ID + ":textures/blocks/emeraldStone.png");
-        crystalCoreTexture = new ResourceLocation(References.MOD_ID + ":textures/blocks/emeraldCore.png");
+        crystalAltar = AdvancedModelLoader.loadModel(new ResourceLocation(References.MOD_ID + ":models/Altar.obj"));
+        crystalAltarTexture = new ResourceLocation(References.MOD_ID + ":textures/models/Altar.png");
     }
 
     @Override
     public void renderTileEntityAt(TileEntity te, double x, double y, double z, float f) {
-        TileEntityEmeraldCore master = (TileEntityEmeraldCore)te;
-        if(((TileEntityEmeraldCore) te).isMultiblock) {
-            GL11.glPushMatrix();
-            GL11.glTranslated(x - .5f, y - .5f, z - .5f);
-            GL11.glPushMatrix();
-            GL11.glScaled(.5f, .5f, .5f);
+        GL11.glPushMatrix();
+        GL11.glTranslated(x + .5, y + .35, z + .5);
+        GL11.glPushMatrix();
+        GL11.glScaled(.33f, .33f, .33f);
 
-            bindTexture(crystalAltarTexture);
-            crystalAltar.renderAll();
+        bindTexture(crystalAltarTexture);
+        crystalAltar.renderAll();
 
-            GL11.glPopMatrix();
-            GL11.glPopMatrix();
-        }
+        GL11.glPopMatrix();
+        GL11.glPopMatrix();
     }
 }

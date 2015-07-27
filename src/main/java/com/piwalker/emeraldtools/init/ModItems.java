@@ -1,12 +1,6 @@
 package com.piwalker.emeraldtools.init;
 
-import com.piwalker.emeraldtools.item.ItemEmeraldAxe;
-import com.piwalker.emeraldtools.item.ItemEmeraldHoe;
-import com.piwalker.emeraldtools.item.ItemEmeraldPickaxe;
-import com.piwalker.emeraldtools.item.ItemEmeraldShard;
-import com.piwalker.emeraldtools.item.ItemEmeraldSpade;
-import com.piwalker.emeraldtools.item.ItemEmeraldSword;
-import com.piwalker.emeraldtools.item.ItemEmeraldTools;
+import com.piwalker.emeraldtools.item.*;
 import com.piwalker.emeraldtools.references.Names;
 import com.piwalker.emeraldtools.references.References;
 
@@ -24,6 +18,10 @@ public class ModItems {
     public static final Item emeraldSword = new ItemEmeraldSword();
     public static final Item emeraldAxe = new ItemEmeraldAxe();
     public static final Item emeraldHoe = new ItemEmeraldHoe();
+    public static final ItemHammer diamondHammer = new ItemDiamondHammer();
+    public static final ItemHammer emeraldHammer = new ItemEmeraldHammer();
+    public static final ItemExcavator diamondExcavator = new ItemDiamondExcavator();
+    public static final ItemExcavator emeraldExcavator = new ItemEmeraldExcavator();
 
     public static void init(){
         GameRegistry.registerItem(emeraldShard, Names.Items.EMERALD_SHARD);
@@ -32,5 +30,9 @@ public class ModItems {
         GameRegistry.registerItem(emeraldSword, Names.Tools.SWORDEMERALD);
         GameRegistry.registerItem(emeraldAxe, Names.Tools.AXEEMERALD);
         GameRegistry.registerItem(emeraldHoe, Names.Tools.HOEEMERALD);
+        GameRegistry.registerItem(diamondHammer, Names.Tools.HAMMERDIAMOND);
+        GameRegistry.registerItem(emeraldHammer, Names.Tools.HAMMEREMERALD);
+        GameRegistry.registerItem(diamondExcavator, Names.Tools.EXCAVATORDIAMOND);
+        GameRegistry.registerItem(emeraldExcavator, Names.Tools.EXCAVATOREMERALD);
     }
 }

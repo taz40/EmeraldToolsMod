@@ -14,6 +14,8 @@ public class BlockEmeraldInfusedStone extends BlockEmeraldToolsTileEntity {
     public BlockEmeraldInfusedStone() {
         super();
         setBlockName(Names.Blocks.EMERALDSTONE);
+        setHardness(1.5F);
+        setResistance(10.0F);
     }
 
     @Override

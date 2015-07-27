@@ -1,7 +1,10 @@
 package com.piwalker.emeraldtools.proxy;
 
 import com.piwalker.emeraldtools.tileentity.SpecialRenderer.CrystalAltarRenderer;
+import com.piwalker.emeraldtools.tileentity.SpecialRenderer.PillerRenderer;
+import com.piwalker.emeraldtools.tileentity.TileEntityCrystalAltar;
 import com.piwalker.emeraldtools.tileentity.TileEntityEmeraldCore;
+import com.piwalker.emeraldtools.tileentity.TileEntityPiller;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,7 +22,8 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void init() {
-        //ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEmeraldCore.class, new CrystalAltarRenderer());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCrystalAltar.class, new CrystalAltarRenderer());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPiller.class, new PillerRenderer());
     }
 
     @Override

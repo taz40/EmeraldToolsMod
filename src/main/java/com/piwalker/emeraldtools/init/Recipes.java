@@ -18,10 +18,14 @@ public class Recipes {
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.emeraldShard, 16),"gemEmerald"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.emeraldStone), ModItems.emeraldShard, Blocks.stone));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.emeraldCore), "III", "IEI", "III", 'I', "ingotIron", 'E', "blockEmerald"));
-        EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldPick),4 , new ItemStack(Items.diamond_pickaxe), 10));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.diamondHammer), "DDD", "DSD", " S ", 'D', "gemDiamond", 'S', "stickWood"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.diamondExcavator), " D ", "DSD", " S ", 'D', "gemDiamond", 'S', "stickWood"));
+        EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldPick), 4, new ItemStack(Items.diamond_pickaxe), 10));
         EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldSpade),4 , new ItemStack(Items.diamond_shovel), 10));
         EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldSword),4 , new ItemStack(Items.diamond_sword), 10));
         EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldAxe),4 , new ItemStack(Items.diamond_axe), 10));
         EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldHoe),4 , new ItemStack(Items.diamond_hoe), 10));
+        EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldHammer),4 , new ItemStack(ModItems.diamondHammer), 10));
+        EmeraldToolsRegistry.RegisterRecipe(new EmeraldToolsRecipe(new ItemStack(ModItems.emeraldExcavator),4 , new ItemStack(ModItems.diamondExcavator), 10));
     }
 }

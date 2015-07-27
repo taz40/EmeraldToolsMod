@@ -58,7 +58,7 @@ public class TileEntityEmeraldCore extends TileEntityEmeraldTools implements IIn
     			emeralds++;
     	}
     	for(EmeraldToolsRecipe r : EmeraldToolsRegistry.getRecipes()){
-    		if(emeralds == r.emeralds && items[4] != null && items[4].getItem() == r.other.getItem()){
+    		if(emeralds == r.emeralds && items[4] != null && items[4].getItem() == r.other.getItem() && items[4].getItemDamage() == r.other.getItemDamage()){
     			out = r.out;
     			this.timeUntilCrafted = r.time*20;
     			

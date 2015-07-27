@@ -1,30 +1,92 @@
-[17:33:25] [main/INFO]: Logging in with username & password
-[17:33:31] [main/INFO]: Setting user: PiWalker
-[17:33:34] [Client thread/INFO]: LWJGL Version: 2.9.1
-[17:33:35] [Twitch authenticator/ERROR]: Given twitch access token is invalid
-[17:33:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
-[17:33:48] [Sound Library Loader/INFO]: Sound engine started
-[17:33:50] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:33:50] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:33:51] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
-[17:33:51] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[17:33:51] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[17:33:52] [Sound Library Loader/INFO]: Sound engine started
-[17:34:04] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[17:34:04] [Server thread/INFO]: Generating keypair
-[17:34:05] [Server thread/INFO]: Preparing start region for level 0
-[17:34:06] [Server thread/INFO]: Preparing spawn area: 45%
-[17:34:07] [Server thread/INFO]: Changing view distance to 8, from 10
-[17:34:08] [Server thread/INFO]: PiWalker[local:E:7eb34f8e] logged in with entity id 182 at (-1518.3338647107491, 4.0, -839.8458816926674)
-[17:34:08] [Server thread/INFO]: PiWalker joined the game
-[17:35:20] [Server thread/INFO]: Saving and pausing game...
-[17:35:20] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
-[17:35:20] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
-[17:35:20] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
-[17:35:21] [Server thread/INFO]: Stopping server
-[17:35:21] [Server thread/INFO]: Saving players
-[17:35:21] [Server thread/INFO]: Saving worlds
-[17:35:21] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
-[17:35:21] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
-[17:35:21] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
-[17:35:22] [Client thread/INFO]: Stopping!
+[21:20:51] [main/INFO]: Logging in with username & password
+[21:20:57] [main/INFO]: Setting user: PiWalker
+[21:21:00] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:21:02] [Twitch authenticator/ERROR]: Given twitch access token is invalid
+[21:21:12] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
+[21:21:14] [Sound Library Loader/INFO]: Sound engine started
+[21:21:16] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:21:16] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:21:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
+[21:21:17] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:21:17] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:21:18] [Sound Library Loader/INFO]: Sound engine started
+[21:21:31] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:21:31] [Server thread/INFO]: Generating keypair
+[21:21:31] [Server thread/INFO]: Preparing start region for level 0
+[21:21:32] [Server thread/INFO]: Preparing spawn area: 31%
+[21:21:33] [Server thread/INFO]: Changing view distance to 8, from 10
+[21:21:34] [Server thread/INFO]: PiWalker[local:E:835142fa] logged in with entity id 183 at (-1509.6952057334245, 8.302598037734159, -846.5441895636989)
+[21:21:34] [Server thread/INFO]: PiWalker joined the game
+[21:21:48] [Server thread/INFO]: Saving and pausing game...
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:21:48] [Server thread/INFO]: Stopping server
+[21:21:48] [Server thread/INFO]: Saving players
+[21:21:48] [Server thread/INFO]: Saving worlds
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:21:48] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:21:51] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:21:51] [Server thread/INFO]: Generating keypair
+[21:21:51] [Server thread/INFO]: Preparing start region for level 0
+[21:21:51] [Server thread/INFO]: Changing view distance to 8, from 10
+[21:21:52] [Server thread/INFO]: PiWalker[local:E:9afa2147] logged in with entity id 49125 at (-1508.1689090185473, 8.143712066004932, -848.9639964202271)
+[21:21:52] [Server thread/INFO]: PiWalker joined the game
+[21:22:38] [Server thread/INFO]: Saving and pausing game...
+[21:22:38] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:22:38] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:22:38] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:22:39] [Server thread/INFO]: Stopping server
+[21:22:39] [Server thread/INFO]: Saving players
+[21:22:39] [Server thread/INFO]: Saving worlds
+[21:22:39] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:22:39] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:22:39] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:25:22] [Client thread/INFO]: Stopping!
+name & password
+[21:25:15] [main/INFO]: Setting user: PiWalker
+[21:25:18] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:25:20] [Twitch authenticator/ERROR]: Given twitch access token is invalid
+[21:25:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
+[21:25:34] [Sound Library Loader/INFO]: Sound engine started
+[21:25:36] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:25:36] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:25:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Emerald Tools
+[21:25:37] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:25:38] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:25:38] [Sound Library Loader/INFO]: Sound engine started
+[21:25:44] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:25:44] [Server thread/INFO]: Generating keypair
+[21:25:45] [Server thread/INFO]: Preparing start region for level 0
+[21:25:46] [Server thread/INFO]: Preparing spawn area: 25%
+[21:25:47] [Server thread/INFO]: Changing view distance to 8, from 10
+[21:25:48] [Server thread/INFO]: PiWalker[local:E:a991398e] logged in with entity id 183 at (-1510.729853298312, 4.0, -847.19518863013)
+[21:25:48] [Server thread/INFO]: PiWalker joined the game
+[21:25:59] [Server thread/INFO]: Saving and pausing game...
+[21:25:59] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:25:59] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:25:59] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:26:00] [Server thread/INFO]: Stopping server
+[21:26:00] [Server thread/INFO]: Saving players
+[21:26:00] [Server thread/INFO]: Saving worlds
+[21:26:00] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:26:00] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:26:00] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:26:02] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:26:02] [Server thread/INFO]: Generating keypair
+[21:26:02] [Server thread/INFO]: Preparing start region for level 0
+[21:26:03] [Server thread/INFO]: Changing view distance to 8, from 10
+[21:26:03] [Server thread/INFO]: PiWalker[local:E:ba23905c] logged in with entity id 40596 at (-1508.7569628256308, 7.989886207150099, -845.7786375570034)
+[21:26:03] [Server thread/INFO]: PiWalker joined the game
+[21:26:32] [Server thread/INFO]: Saving and pausing game...
+[21:26:32] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:26:32] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:26:32] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:26:35] [Server thread/INFO]: Stopping server
+[21:26:35] [Server thread/INFO]: Saving players
+[21:26:35] [Server thread/INFO]: Saving worlds
+[21:26:35] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Overworld
+[21:26:35] [Server thread/INFO]: Saving chunks for level 'DevWorld'/Nether
+[21:26:35] [Server thread/INFO]: Saving chunks for level 'DevWorld'/The End
+[21:26:40] [Client thread/INFO]: Stopping!
